@@ -23,12 +23,40 @@ padding-left: 20px;
 }
 
 
+.review-form  .ng-dirty.ng-invalid {
+  border: 1px solid red;
+}
+.review-form  .ng-dirty.ng-valid {
+  border: 2px solid #7cfd3b;
+}
+
+
 .review-form input[type="text"]{
 margin-bottom: 10px;
 width:300px;
 height:20px;
 padding-left: 5px; 
 }
+
+
+.review-form input[type="email"]{
+display: inline-block;
+margin-bottom: 10px;
+width:300px;
+height:20px;
+padding-left: 5px; 
+}
+.review-form .errormsg{
+
+font-size:14px;
+color:red;
+margin-top: 0;
+padding-top: 3px;
+margin-left: 10px;
+vertical-align: top;
+display: inline-block;
+}
+
 
 .review-form_container{
 display:inline-block;
@@ -104,6 +132,8 @@ display:inline-block;
 }
 
 .reviews{
+max-height:348px;
+overflow-y: scroll;
 color:white;
 background-color: #252e38;
 margin-top: 30px;
@@ -161,4 +191,50 @@ border-width:1px;
 	display: inline-block;
 	width:20px;
 	height: 20px;
+}
+
+
+.pagesize{
+	margin:0 auto;
+	width:200px;
+	color: white;
+	font-family: lato;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+.pagination{
+	margin: 0 auto;
+	width: 200px;
+}
+
+.pagination li{
+
+	list-style: none;
+	display: inline-block;
+}
+.pagination button{
+	background-color: #252e38;
+	font-weight: 700;
+	color:white;
+	font-size:12px;
+	height:30px;
+	border:none;
+	border-bottom: 25px;
+}
+
+.pagination button:disabled{
+	opacity:0.4;
+}
+.pagination button:disabled:hover{
+	opacity:0.4;
+}
+
+.pagination button:hover{
+	opacity:0.8;
+}
+
+.pagination span{
+	color:white;
+	font-size:14px;
 }
