@@ -110,7 +110,7 @@ display:inline-block;
   display         : block;
   float           : right;
   position        : relative;
-  background      : url('../star_off.png');
+  background      : url('../Images/star_off.png');
   background-size : contain;
 }
 
@@ -119,7 +119,7 @@ display:inline-block;
   display         : block;
   width           : 1.5em;
   height          : 1.5em;
-  background      : url('../star_on.png');
+  background      : url('../Images/star_on.png');
   background-size : contain;
   opacity         : 0;
   transition      : opacity 0.2s linear;
