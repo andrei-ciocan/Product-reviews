@@ -7,7 +7,8 @@ include('config.php');
 $result = $conn->query("SELECT reviewer_name, reviewer_email, review_content, rating FROM reviews");
 
 $outp = "";
-while($rs = $result->fetch_array(MYSQLI_ASSOC)) {
+while($rs = $result->fetch_array(MYSQLI_ASSOC)) 
+{
 	
 	//adding , to output if it's not the last item, so we can keep a correct json format
 	if ($outp != "") {$outp .= ",";}

@@ -1,11 +1,11 @@
 (function(){
-angular
-.module('app')
-.controller('ReviewCreator',ReviewCreator);
+	angular
+	.module('app')
+	.controller('ReviewCreator',ReviewCreator);
 
-function ReviewCreator($http){
-	var vm=this;
-	vm.review={};
+	function ReviewCreator($http){
+		var vm=this;
+		vm.review={};
 
 	//adding default reviewer photo to instantly submitted comment
 	vm.review.reviewerPhoto="http://sandbox.rioranchoyellowjackets.com/wp-content/uploads/2013/11/placeholder1.gif";

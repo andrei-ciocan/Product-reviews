@@ -194,13 +194,17 @@ border-width:1px;
 }
 
 
-.pagesize{
+.items-on-page{
+	background-color: #252e38;
+	border: 1px transparent;
+	border-radius:4px;
 	margin:0 auto;
-	width:200px;
+	width:165px;
 	color: white;
+	font-size: 14px;
 	font-family: lato;
 	margin-bottom: 0px;
-	padding-bottom: 0px;
+	padding:4px 4px 4px 10px;
 }
 
 .pagination{
