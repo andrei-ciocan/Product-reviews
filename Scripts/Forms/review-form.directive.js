@@ -8,7 +8,7 @@
 	function myappReviewForm(){
 		return{
 			restrict: 'E',
-			templateUrl:'Scripts/Forms/review-form.php',
+			templateUrl:'Scripts/Forms/review-form.html',
 			controller: 'ReviewCreator',
 			controllerAs:'revCreate'
 

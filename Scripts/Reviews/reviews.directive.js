@@ -8,8 +8,10 @@
 	function myappUsersReviews(){
 		return{
 			restrict: 'E',
-			templateUrl:'Scripts/Reviews/reviews.php'
-
+			templateUrl:'Scripts/Reviews/reviews.html',
+			scope: {
+     		revs: '=type'
+    		}
 
 		};
 	}

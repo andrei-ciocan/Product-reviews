@@ -30,4 +30,5 @@ $outp ='{"reviews":['.$outp.']}';
 $conn->close();
 
 echo($outp);
+
 ?>

@@ -1,5 +1,5 @@
 <div class="reviews">
-	<div ng-repeat="review in vm.reviews | startFrom:(vm.currentPage-1)*vm.entryLimit | limitTo:vm.entryLimit  track by $index " class="review">
+	<div ng-repeat="review in revs.reviews | startFrom:(revs.currentPage-1)*revs.entryLimit | limitTo:revs.entryLimit  track by $index " class="review">
 		<div class="review_user">
 			<img ng-src="{{review.reviewerPhoto}}">
 			<div class="review_username">{{review.reviewerName}}</div>

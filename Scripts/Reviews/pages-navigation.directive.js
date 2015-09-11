@@ -8,8 +8,10 @@
 	function myappReviewsPageNavigation(){
 		return{
 			restrict: 'E',
-			templateUrl:'Scripts/Reviews/pages-navigation.php'
-
+			templateUrl:'Scripts/Reviews/pages-navigation.html',
+			scope: {
+     		 type: '=type'
+    		}
 
 		};
 	}
