@@ -10,21 +10,16 @@
 //get request to display reviews, also setting pagination defaults
 $http.get("getdata.php")
 .success(function (response) {
-	vm.reviews = response.reviews;
-	vm.currentPage=1;
-	vm.entryLimit = 20;
-	vm.totalItems=vm.reviews.length;
-	vm.numberOfPages= numberOfPages;
 
-	$scope.first = { reviews:vm.reviews, currentPage: vm.currentPage, entryLimit: vm.entryLimit, totalItems:vm.totalItems, numberOfPages:vm.numberOfPages};
+	$scope.first = { reviews:response.reviews, currentPage:1 , entryLimit:20, totalItems:response.reviews.length, numberOfPages:getNumberOfPages};
 	
 
 });
 
 
-function numberOfPages(totalItems,entryLimit) 
+function getNumberOfPages(total,entry) 
 {
-	return Math.ceil(vm.totalItems / vm.entryLimit);
+	return Math.ceil(total/entry);
 };
 
 
