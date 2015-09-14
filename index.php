@@ -10,11 +10,12 @@
 		<myapp-reviews-displayed-on-page type="first"></myapp-reviews-displayed-on-page>
 		<myapp-review-form></myapp-review-form>
 		<myapp-users-reviews type="first"></myapp-users-reviews>
-		<myapp-reviews-page-navigation type="first"></myapp-reviews-page-navigation>		
+		<myapp-reviews-page-navigation type="first"></myapp-reviews-page-navigation>	
 	</div>
 	
 	<script type="text/javascript" src="Scripts/angular.js"></script>
 	<script type="text/javascript" src="Scripts/app.module.js"></script>
+	<script type="text/javascript" src="Scripts/message.factory.js"></script>
 	<script type="text/javascript" src="Scripts/Reviews/review-display.controller.js"></script>
 	<script type="text/javascript" src="Scripts/Forms/review-creator.controller.js"></script>
 	<script type="text/javascript" src="Scripts/Reviews/page.filter.js"></script>

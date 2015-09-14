@@ -4,7 +4,7 @@ header("Content-Type: application/json; charset=UTF-8");
 
 include('config.php');
 //getting data from reviews table
-$result = $conn->query("SELECT reviewer_name, reviewer_email, review_content, rating FROM reviews");
+$result = $conn->query("SELECT reviewer_name, reviewer_email, review_content, rating FROM reviews ORDER BY id ASC");
 
 $outp = "";
 while($rs = $result->fetch_array(MYSQLI_ASSOC)) 

@@ -3,7 +3,7 @@
 	.module('app')
 	.controller('ReviewCreator',ReviewCreator);
 
-	function ReviewCreator($http){
+	function ReviewCreator($http,MessageSender){
 		var vm=this;
 		vm.review={};
 
@@ -12,7 +12,7 @@
 	vm.review_submit = review_submit;
 
 	
-	function review_submit(review,something) {
+	function review_submit(review) {
 		vm.review = angular.copy(review);
 
 		//post request sent to db.php to insert fields into database
@@ -36,8 +36,9 @@
 
 					//validation message and displaying review if it's valid
 					var revcopy = angular.copy(review);
-					something.push(revcopy);
-					revcopy={};
+					//setting service message when the submited message is valid
+					MessageSender.setMessage(revcopy);
+
 				}
 				else
 					{	//displaying error if email already exists in the database
