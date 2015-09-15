@@ -38,6 +38,7 @@
 					var revcopy = angular.copy(review);
 					//setting service message when the submited message is valid
 					MessageSender.setMessage(revcopy);
+					vm.review={};
 
 				}
 				else

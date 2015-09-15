@@ -13,22 +13,44 @@
 			$http.get("getdata.php")	
 			.success(function (response) {
 
-				$scope.first = { reviews:response.reviews, currentPage:1 , entryLimit:20, totalItems:response.reviews.length, numberOfPages:getNumberOfPages, addReview:addNewReview};
-
+				$scope.first = { reviews:response.reviews, currentPage:1 , entryLimit:20, totalItems:response.reviews.length, numberOfPages:getNumberOfPages, gotoFirstPage:gotoFirstPage, nextPage:nextPage,prevPage:prevPage, disablePrev:disablePrev, disableNext:disableNext };
+				
 
 			});
 
 		});
 
 
-		function getNumberOfPages(total,entry) 
+		function getNumberOfPages() 
 		{
-			return Math.ceil(total/entry);
+			return Math.ceil(this.totalItems/this.entryLimit);
 		};
 
-		function addNewReview(msg,reviews){
+		function gotoFirstPage(){
+			this.currentPage=1;
+		}
 
-			reviews.push(msg);
+		function nextPage(){
+			this.currentPage=this.currentPage+1;
+
+		}
+
+		function prevPage(){
+			this.currentPage=this.currentPage-1;
+
+		}
+
+		function disablePrev(){
+			if(this.currentPage===1)
+				return 1;
+			return 0;
+
+		}
+
+		function disableNext(){
+			if(this.currentPage>=this.numberOfPages())
+				return 1;
+			return 0;
 
 		}
 

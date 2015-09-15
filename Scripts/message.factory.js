@@ -21,7 +21,6 @@
 		return({
 			getMessage: getMessage,
 			setMessage: setMessage,
-			mess:vm.msg
 		})
 
 	}

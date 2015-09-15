@@ -6,11 +6,14 @@
 
 //start position filter
 function startFrom() {
-	return function(input, start) {
+	
+	var startPosition=function(input, start) {
 		if (!input || !input.length) { return; }
         start = +start; //parse to int
         return input.slice(start);
     }
+
+    return startPosition;
 };
 
 })();

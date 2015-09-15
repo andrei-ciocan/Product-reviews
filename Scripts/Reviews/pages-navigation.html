@@ -1,16 +1,16 @@
 <div class="pagination" ng-show="type.reviews.length">
 	<ul>
 		<li>
-			<button type="button" ng-disabled="type.currentPage == 1"
-			ng-click="type.currentPage=type.currentPage-1">PREV</button>
+			<button type="button" ng-disabled="type.disablePrev()"
+			ng-click="type.prevPage()">PREV</button>
 		</li>
 		<li>
-			<span>Page {{type.currentPage }} of {{ type.numberOfPages(type.totalItems,type.entryLimit) }}</span>
+			<span>Page {{type.currentPage }} of {{ type.numberOfPages() }}</span>
 		</li>
 		<li>
 			<button type="button"
-			ng-disabled="type.currentPage >=  type.numberOfPages(type.totalItems,type.entryLimit) "
-			ng-click="type.currentPage = type.currentPage+1">NEXT </button>
+			ng-disabled="type.disableNext()"
+			ng-click="type.nextPage()">NEXT </button>
 		</li>
 	</ul>
 </div>
