@@ -8,7 +8,7 @@
 		vm.review={};
 
 	//adding default reviewer photo to instantly submitted comment
-	vm.review.reviewerPhoto="http://sandbox.rioranchoyellowjackets.com/wp-content/uploads/2013/11/placeholder1.gif";
+	vm.review.reviewerPhoto="Images/placeholder.png";
 	vm.review_submit = review_submit;
 
 	
@@ -38,7 +38,7 @@
 					var revcopy = angular.copy(review);
 					//setting service message when the submited message is valid
 					MessageSender.setMessage(revcopy);
-					vm.review={};
+					
 
 				}
 				else

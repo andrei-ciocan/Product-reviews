@@ -13,7 +13,7 @@
 			$http.get("getdata.php")	
 			.success(function (response) {
 
-				$scope.first = { reviews:response.reviews, currentPage:1 , entryLimit:20, totalItems:response.reviews.length, numberOfPages:getNumberOfPages, gotoFirstPage:gotoFirstPage, nextPage:nextPage,prevPage:prevPage, disablePrev:disablePrev, disableNext:disableNext };
+				$scope.first = {vm:this, reviews:response.reviews, currentPage:1 , entryLimit:20, totalItems:response.reviews.length, numberOfPages:getNumberOfPages, gotoFirstPage:gotoFirstPage, nextPage:nextPage,prevPage:prevPage, disablePrev:disablePrev, disableNext:disableNext };
 				
 
 			});
@@ -27,7 +27,7 @@
 		};
 
 		function gotoFirstPage(){
-			this.currentPage=1;
+			$scope.first.currentPage=1;
 		}
 
 		function nextPage(){

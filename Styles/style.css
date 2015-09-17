@@ -1,3 +1,5 @@
+
+
 *{
   font-family: Lato;
 }
@@ -145,19 +147,23 @@ padding: 20px 20px 20px 20px;
 background-color:#2c3e50;
 margin-bottom: 20px;
 border-style: solid;
-border-color:#B0C4DE;
-border-width:1px;
-
+border-color:#054282;
+border-width:2px;
 }
+
+
 
 .review_user{
 	border-style: solid;
 	border-left: hidden;
-	border-width:1px;
+	border-top: hidden;
+	border-width:2px;
 	display: inline-block;
 	width:120px;
-	border-color:#B0C4DE;
+	border-color:#054282;
 }
+
+
 
 
 .review_username{
@@ -223,8 +229,9 @@ border-width:1px;
 	color:white;
 	font-size:12px;
 	height:30px;
-	border:none;
+	border:transparent;
 	border-bottom: 25px;
+	border-radius: 3px;
 }
 
 .pagination button:disabled{
